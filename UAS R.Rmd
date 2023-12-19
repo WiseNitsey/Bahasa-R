@@ -1,0 +1,45 @@
+---
+title: "UAS R"
+author: "wiselyyestin"
+date: "2023-12-19"
+output: html_document
+---
+#import library
+```{r}
+library(dplyr)
+library(corrplot)
+library(nortest)
+library(moments)
+library(outliers)
+library(GGally)
+library(ggplot2)
+library(Metrics)
+library(caret)
+library(boot)
+library(performanceEstimation)
+library(pROC)
+library(psych)
+```
+
+#Load Dataset
+```{r}
+profiling=read.csv('profiling.csv', sep=';')
+admisi=read.csv('admisi.csv', sep=';')
+
+str(profiling)
+str(admisi)
+
+View(profiling)
+View(admisi)
+```
+#cek mising value
+```{r}
+missing_values_profiling = sapply(profiling, function(x) sum(is.na(x)))
+missing_values_profiling
+missing_values_admisi = sapply(admisi, function(x) sum(is.na(x)))
+missing_values_admisi
+```
+#ubah ke numeric
+```{r}
+
+```
